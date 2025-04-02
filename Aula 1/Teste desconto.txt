@@ -1,0 +1,17 @@
+
+using System;
+using static System.Console;
+
+double preco, desconto, pd;
+string produto;
+
+WriteLine("Digite o nome do produto");
+produto = ReadLine();
+WriteLine("Digite o valor do produto R$");
+preco = Convert.ToDouble(ReadLine());
+desconto = preco * 0.10;
+pd = preco - desconto;
+WriteLine("===========================");
+WriteLine($"Valor do(a) {produto} com 10% de desconto R$ {pd.ToString("F")}");
+WriteLine($"Valor do desconto R$ {desconto.ToString("F")}");
+ReadKey();
