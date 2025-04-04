@@ -1,0 +1,29 @@
+using System;
+using System.ComponentModel.Design;
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Digite o valor total da compra:");
+        decimal valorCompra = decimal.Parse(Console.ReadLine()!);
+
+        decimal valorComDesconto = valorCompra;
+
+        if (valorCompra < 50)
+        {
+            // Sem desconto para a pessoa ou empresa
+        }
+        else if (valorCompra <= 100)
+        {
+            valorComDesconto = valorCompra * 0.95m; // fica com 5% de desconto
+        }
+        else
+        {
+            valorComDesconto = valorCompra * 0.90m; // fica com 10% de desconto
+        }
+
+        Console.WriteLine("Valor original: R$" + valorCompra);
+        Console.WriteLine("Valor com desconto: R$" + valorComDesconto);
+
+    }
+}

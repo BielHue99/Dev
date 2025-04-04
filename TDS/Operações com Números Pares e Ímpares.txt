@@ -1,0 +1,33 @@
+using System;
+ class Program
+{    
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Digite o primeiro número:");
+            int num1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número:");
+            int num2 = int.Parse(Console.ReadLine());
+
+            bool num1Par = num1 % 2 == 0;
+            bool num2Par = num2 % 2 == 0;
+
+            if (num1Par && num2Par)
+            {
+                Console.WriteLine("Ambos são pares. Soma: " + (num1 + num2));
+            }
+            else if (!num1Par && !num2Par)
+            {
+                Console.WriteLine("Ambos são ímpares. Multiplicação: " + (num1 * num2));
+            }
+            else
+            { 
+                int maior = (num1 > num2) ? num1 : num2;
+                int menor = (num1 < num2) ? num1 : num2;
+
+                Console.WriteLine("Um é par e o outro é ímpar. Subtração: " + (maior - menor));
+            }
+        }
+    
+
+}

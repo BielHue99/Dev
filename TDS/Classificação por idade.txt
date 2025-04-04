@@ -1,0 +1,28 @@
+Classificação por idade 
+using System;
+using System.ComponentModel.Design;
+class Program
+{
+    static void Main ()
+    {
+        Console.WriteLine("Digite uma Idade aqui:");
+        int idade = int.Parse(Console.ReadLine());
+
+        if (idade >= 0 && idade <= 12)
+        {
+            Console.WriteLine("é uma criança");
+        }
+        else if (idade >= 13 && idade <= 17)
+        {
+            Console.WriteLine("é um adolescente");
+        }
+        else if (idade >= 18 && idade <= 59)
+        {
+            Console.WriteLine("é um adulto");
+        }
+        else if (idade >= 60)
+        {
+            Console.WriteLine("é um idoso");
+        }
+    }
+}

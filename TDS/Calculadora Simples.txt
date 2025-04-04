@@ -1,0 +1,53 @@
+Calculadora Simples 
+using System;
+using System.ComponentModel.Design;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Digite primeiro numero: ");
+        int num1 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite segundo numero numero: ");
+        int num2 = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Digite a operação (+, -, *, /): ");
+
+        string operacao = Console.ReadLine();
+
+        if (operacao == "+")
+        {
+            // aqui vai somar os dois numeros
+            Console.WriteLine(num1 + num2);
+        }
+        else if (operacao == "-")
+        {
+            // aqui vai subtrair os dois numeros
+            Console.WriteLine(num1 - num2);
+        }
+        else if (operacao == "*")
+        {
+            // aqui vai multiplicar os dois numeros
+            Console.WriteLine(num1 * num2);
+        }
+        else if (operacao == "/")
+        // aqui vai dividir os numeros    
+        {
+            if (num2 != 0)
+            {
+                Console.WriteLine("Resultado: " + (num1 / num2));
+
+            }
+            else
+            {
+                Console.WriteLine("Erro: Divisão por zero.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Tentativa de calculo invalida");
+            // aqui a tentativa de calculo foi invalida
+        }
+    }
+
+}
